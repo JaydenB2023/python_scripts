@@ -6,13 +6,13 @@ from email.mime.text import MIMEText
 from collections import defaultdict 
 
 # Email configuration
-smtp_from = 'Reports' + "<reports@finishline.com>"
-#email_to = ["jabrown@finishline.com"]  # List of recipients
-email_to = ["jabrown@finishline.com", "soxcompliance@jdnorthamerica.com", "lrucker@finishline.com"]
+smtp_from = 'Reports' + "<email you want it to send from>"
+#email_to = ["test email"]  # List of recipients
+email_to = ["email1", "email2", "email3]
 smtp_subject = "Report"
-smtp_server = "smtp.finishline.com"
+smtp_server = "smtp hostname"
 
-def send_link_email(link, subject="AD Admin Accounts Report", body="Please see last month's AD Admin Accounts report:"):
+def send_link_email(link, subject="AD Admin Accounts Report", body="Please see last month's AD Admin Accounts report:"): 
     """Sends an email with the provided link."""
 
     msg = MIMEMultipart()
