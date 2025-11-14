@@ -22,7 +22,8 @@ def getGoogleSheet(spreadsheet_id, outDir, outFile):
 outDir = '[your_ouput_directory]'
 
 os.makedirs(outDir, exist_ok = True)
-filepath = getGoogleSheet('1234567890', outDir, "[name].csv")
+filepath = getGoogleSheet('[google sheet code found in url]', outDir, "[name of csv].csv")
 
 
 sys.exit(0); ## success
+
