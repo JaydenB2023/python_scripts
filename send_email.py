@@ -1,17 +1,17 @@
-## Script that will send an email
+## Script that will send a provided link through email and a specified sender (can be used for automation)
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from collections import defaultdict 
 
 # Email configuration
-smtp_from = 'Reports' + "<email you want it to send from>"
+smtp_from = '[name you want the sender to read as]' + "<[email you want it to send from]>"
 #email_to = ["test email"]  # List of recipients
-email_to = ["email1", "email2", "email3"]
-smtp_subject = "Report"
-smtp_server = "smtp hostname"
+email_to = ["[email1]", "[email2]", "[email3]"]
+smtp_subject = "[Subject]"
+smtp_server = "[smtp server hostname]"
 
-def send_link_email(link, subject="Subject", body="Message:"): 
+def send_link_email(link, subject="[Subject]", body="[Message:]"): 
     """Sends an email with the provided link."""
 
     msg = MIMEMultipart()
@@ -39,6 +39,7 @@ def send_link_email(link, subject="Subject", body="Message:"):
     except Exception as e:
         print(f"Error sending email: {e}")
 
+# Prompts the user to paste a link they want to email
 if __name__ == "__main__":
     link_to_send = input("Enter the link you want to email: ")
     send_link_email(link_to_send)  
