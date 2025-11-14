@@ -1,5 +1,4 @@
-## How to run on server
-# run from VS Code
+## Script that will send an email
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -8,11 +7,11 @@ from collections import defaultdict
 # Email configuration
 smtp_from = 'Reports' + "<email you want it to send from>"
 #email_to = ["test email"]  # List of recipients
-email_to = ["email1", "email2", "email3]
+email_to = ["email1", "email2", "email3"]
 smtp_subject = "Report"
 smtp_server = "smtp hostname"
 
-def send_link_email(link, subject="AD Admin Accounts Report", body="Please see last month's AD Admin Accounts report:"): 
+def send_link_email(link, subject="Subject", body="Message:"): 
     """Sends an email with the provided link."""
 
     msg = MIMEMultipart()
