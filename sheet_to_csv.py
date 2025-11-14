@@ -1,10 +1,11 @@
+# converts Google Sheet to csv automatically
 import os
 import requests
 import sys
 
-def getGoogleSeet(spreadsheet_id, outDir, outFile):
+def getGoogleSheet(spreadsheet_id, outDir, outFile):
   
-  url = f'https://docs.google.com/spreadsheets/d/1tcY3PPYtJGe9Vv8p7Vnw8kJGIu6P1GaAPFhCeT-yEj8/export?format=csv'
+  url = f'[your_Google_Sheet_URL]'
   response = requests.get(url)
   if response.status_code == 200:
     filepath = os.path.join(outDir, outFile)
@@ -18,9 +19,10 @@ def getGoogleSeet(spreadsheet_id, outDir, outFile):
 
 ##############################################
 
-outDir = 'tmp/'
+outDir = '[your_ouput_directory]'
 
 os.makedirs(outDir, exist_ok = True)
-filepath = getGoogleSeet('1234567890', outDir, "devnodes.csv")
+filepath = getGoogleSheet('1234567890', outDir, "[name].csv")
+
 
 sys.exit(0); ## success
