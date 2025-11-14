@@ -1,5 +1,5 @@
 ## Takes a store number and converts the number to an IP
-# Example: store 1234 equals IP ##.#21.34
+# Example: store 1234 equals IP ##.#21.34.##
 def convert_to_ip(number):
     # Ensure the number is within the 4-digit range
     if number < 0 or number > 9999:
