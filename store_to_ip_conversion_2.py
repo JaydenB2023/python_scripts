@@ -1,3 +1,5 @@
+## Takes a store number and converts the number to an IP
+# Example: store 1234 equals IP ##.#21.34
 def convert_to_ip(number):
     # Ensure the number is within the 4-digit range
     if number < 0 or number > 9999:
@@ -11,9 +13,9 @@ def convert_to_ip(number):
     # If the first z equals zero, don't include it
     if zz[0] == '0':
         zz = zz[1:]
-    # Create the IP address in the format 10.1yx.zz.1
-    ip_address_1 = f"10.1{y}{x}.{zz}.1"
-    ip_address_2 = f"10.1{y}{x}.{zz}.255"
+    # Create the IP address in the format ##.#yx.zz.1
+    ip_address_1 = f"##.#{y}{x}.{zz}.1"
+    ip_address_2 = f"##.#{y}{x}.{zz}.255"
 
     ip_address = ip_address_1, ip_address_2 
     
